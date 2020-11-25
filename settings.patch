@@ -1,0 +1,25 @@
+--- settings.sh	2020-11-25 02:37:29.435485158 +0000
++++ settings.sh.tmp	2020-11-25 02:36:59.857520144 +0000
+@@ -402,12 +402,19 @@
+ SYSTEMMPICH)
+     mpi_version=mpich-system
+
+-    export MPI_HOME=$CRAY_MPICH2_DIR
+-    export MPI_ARCH_PATH=$CRAY_MPICH2_DIR
++#    export MPI_HOME=$CRAY_MPICH2_DIR
++#    export MPI_ARCH_PATH=$CRAY_MPICH2_DIR
++#    export MPICH_ROOT=$MPI_ARCH_PATH
++#
++#    _foamAddPath $MPI_ARCH_PATH/bin
++#    _foamAddLib  $MPI_ARCH_PATH/lib
++
++    export MPI_HOME=/usr
++    export MPI_ARCH_PATH=/usr
+     export MPICH_ROOT=$MPI_ARCH_PATH
+
+     _foamAddPath $MPI_ARCH_PATH/bin
+-    _foamAddLib  $MPI_ARCH_PATH/lib
++    _foamAddLib  $MPI_ARCH_PATH/lib64
+
+     unset mpi_version
+     ;;
