@@ -1,0 +1,30 @@
+--- prefs.sh-EXAMPLE	2020-11-24 12:31:27.806184191 +0000
++++ prefs.sh	2020-11-25 02:34:46.966141589 +0000
+@@ -36,7 +36,7 @@
+
+ # Specify system compiler
+ # ~~~~~~~~~~~~~~~~~~~~~~~
+-#compilerInstall=System
++compilerInstall=System
+ #compilerInstall=FOAM
+
+ # Specify system openmpi
+@@ -46,6 +46,7 @@
+ # The other openmpi related variables will be initialized using
+ # the command mpicc --showme:
+ #
++export WM_MPLIB=SYSTEMMPICH
+ #export WM_MPLIB=SYSTEMOPENMPI
+ #export OPENMPI_DIR=path_to_system_installed_openmpi
+ #export OPENMPI_BIN_DIR=$OPENMPI_DIR/bin
+@@ -225,8 +226,8 @@
+ #export WM_THIRD_PARTY_USE_OPENMPI_400_ConfigureAdditionalArgs='--enable-mpi-cxx --with-verbs'
+ #export WM_THIRD_PARTY_USE_OPENMPI_311=1
+ #export WM_THIRD_PARTY_USE_OPENMPI_311_ConfigureAdditionalArgs='--enable-mpi-cxx --with-verbs'
+-export WM_THIRD_PARTY_USE_OPENMPI_188=1
+-export WM_THIRD_PARTY_USE_OPENMPI_188_ConfigureAdditionalArgs='--enable-mpi-cxx --with-verbs'
++#export WM_THIRD_PARTY_USE_OPENMPI_188=1
++#export WM_THIRD_PARTY_USE_OPENMPI_188_ConfigureAdditionalArgs='--enable-mpi-cxx --with-verbs'
+ #export WM_THIRD_PARTY_USE_OPENMPI_165=1
+ #export WM_THIRD_PARTY_USE_OPENMPI_165_ConfigureAdditionalArgs='--enable-mpi-cxx --with-openib'
+ #export WM_THIRD_PARTY_USE_OPENMPI_15=1
